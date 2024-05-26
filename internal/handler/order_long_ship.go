@@ -323,7 +323,7 @@ func UpdateLSStartVehicleHandler(c *gin.Context, userAuthID uint) {
 	// Run concurrency
 	var g errgroup.Group
 
-	// Send message to sate machine (Zeebe or State Scem)
+	// Send message to sate machine (Zeebe or State Scem) //skip
 	g.Go(func() error {
 		if err := CommonMessage.PublishVehicleStartedMessage(longShip.ID); err != nil {
 			return err
